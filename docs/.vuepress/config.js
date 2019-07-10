@@ -51,6 +51,11 @@ module.exports = {
                 children: [ '/css/' ]
             },
             {
+                title: 'gulp',
+                collapsable: false,
+                children: [ '/gulp/' ]
+            },
+            {
                 title: 'others',
                 collapsable: false,
                 children: [ '/others/']
