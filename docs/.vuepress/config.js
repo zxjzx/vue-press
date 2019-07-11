@@ -13,10 +13,16 @@ module.exports = {
         nav: [ // 导航栏配置
             {text: 'Github', link: 'https://github.com/zxjzx'},
             {text: 'CSDN博客', link: 'https://blog.csdn.net/sinat_36146776'},
+            {text: 'clock out 打卡系统', link: 'https://zhangxiaojuan.club:8081'},
             {text: '推荐工具', items:[
                     {text:'Normalize-更好的跨浏览器一致性',link:'http://nicolasgallagher.com/about-normalize-css/'},
                     {text:'建站工具-Hexo(MD)',link:'https://hexo.io/zh-cn/docs/themes'},
                     {text:'建站工具-Wordpress(PHP)',link:'https://cn.wordpress.org/'},
+                    {text:'html2canvas - 页面截屏',link:'http://html2canvas.hertzen.com/'},
+                    {text:'Windows下nginx的安装',link:'https://blog.csdn.net/sinat_36146776/article/details/83413166'},
+                    {text:'MDN',link:'https://developer.mozilla.org/zh-CN/'},
+                    {text:'百度脑图',link:'http://naotu.baidu.com/home'},
+                    {text:'翻墙工具',link:'https://pao-pao.net/vpn-compare'},
                 ]},
         ],
         sidebar: [
@@ -43,7 +49,7 @@ module.exports = {
                 title: 'javascript',
                 collapsable: false,
                 children: [
-                    '/javascript/','/javascript/time/','/javascript/event-loop/','/javascript/this/',
+                    '/javascript/time/','/javascript/event-loop/','/javascript/this/',
                 ]
             },
             {

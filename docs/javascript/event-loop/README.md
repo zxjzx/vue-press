@@ -21,13 +21,29 @@ console.log(5); //第一个宏任务
 ```
 
 + 宏任务
+
 **setTimeout**，**setInterval**，**setImmediate**， I/O，promise中的executor，script；
 + 微任务
-原生**Promise**，**Promise.then**,(有些实现的promise将then方法放到了宏任务中)，MutationObserver， MessageChannel，process.nextTick
-+ 出现async/await不要慌，记住async正常执行，await后面的函数相当于promise.then，是一个微任务
-+ 特别的：setImmediate比setTimeout先执行，process.nextTick优先级高于Promise.then
 
->执行代码过程：先执行宏任务，清空微任务再执行下一个宏任务
+原生**Promise**，**Promise.then**,(有些实现的promise将then方法放到了宏任务中)，MutationObserver， MessageChannel，process.nextTick
+
+::: warning
+出现async/await不要慌，记住async正常执行，await后面的函数相当于promise.then，是一个微任务
+
+特别的：setImmediate比setTimeout先执行，process.nextTick优先级高于Promise.then
+:::
+
+任务队列实际上有两个，一个是宏任务队列，一个是微任务队列，当主线程执行完毕，如果微任务队列中有微任务，则会先进入执行栈，当微任务队列没有任务时，才会执行宏任务的队列。
+
+
+::: warning 宏任务和微任务
+执行代码过程：先执行宏任务，清空微任务再执行下一个宏任务
+当前宏任务执行完了，清空微任务再开始下一个宏任务。
+setTimeout是一个宏任务，promise里面的代码是同步执行的，then中的代码是一个微任务。当前宏任务执行完了，就执行微任务里面的，微任务清空后，执行下一个宏任务即setsetTimeout第一个参数的内容
+
+setTimeout 属于 宿主环境发出的宏任务，promise 是js引擎发出的微任务 
+
+:::
 
 ### 例2、以下代码会输出什么？ Promise
 ```javascript

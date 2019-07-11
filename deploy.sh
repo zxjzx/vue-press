@@ -3,6 +3,7 @@ npm run docs:build
 cd docs/.vuepress/dist
 
 echo 'git.zhangxiaojuan.club' > CNAME
+echo '# 我的个人网站[链接](https://git.zhangxiaojuan.club/)' > README.md
 
 git init
 git add -A

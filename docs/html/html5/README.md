@@ -1,10 +1,4 @@
 # html5 - requestAnimationFrame
-
-[[toc]]
-
-## requestAnimationFrame和setTimeout的对比
-
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -73,6 +67,3 @@
 </html>
 
 ```
-
-## website-iframe
-<website-iframe />
