@@ -1,10 +1,14 @@
 <template>
-    <ul>
-        <li v-for="item in list">
-            <span>标题：{{item}}</span>
+    <div>
+        <ul>
+            <li v-for="item in list">
+                <span>标题：{{item}}</span>
 
-        </li>
-    </ul>
+            </li>
+        </ul>
+        <img :src="$withBase('/google.png')" alt="foo">
+    </div>
+
 </template>
 
 <script>

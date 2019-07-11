@@ -1,23 +1,8 @@
-# 我是标题，标题是我
-
-::: danger 警告
-警告内容
-:::
+# 这是个人网站内容（正在构建中...）
 
 
+## 点击左边目录查看跳转
 
-::: v-pre
-`{{ This will be displayed as-is }}`
-:::
-
-text <demo/>
-
-<demo-1/>
+## 若想知道更多详情，请查看[blog.csdn](https://blog.csdn.net/sinat_36146776)
 
 
-[Home](/)
-
-[static](../static/index.html) 
-
-
-[foo - two](/foo/two.md) <!-- 也可以用 .md -->

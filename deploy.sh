@@ -9,3 +9,10 @@ git add -A
 git commit -m 'deploy'
 
 git push -f git@github.com:zxjzx/zxjzx.github.io.git master
+
+# cd docs
+# treer -e tree.txt -i "/.vuepress/"
+# cd .vuepress
+# treer -e tree.txt -i "/dist/"
+
+

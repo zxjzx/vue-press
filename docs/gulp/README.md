@@ -1,5 +1,6 @@
 # gulp
 
+[[toc]]
 
 ## gulp如何使用
 ```javascript
