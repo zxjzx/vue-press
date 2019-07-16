@@ -8,6 +8,7 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
+    "@nutui/nutui": "^2.1.5",
     "vuepress": "^1.0.2"
   }
 }
