@@ -54,7 +54,7 @@ module.exports = {
             {
                 title: 'website 服务器相关',
                 collapsable: true,
-                children: ['/website/xshell6/', '/website/buy-config/', '/website/node-config/', '/website/nginx-config/', '/website/webstrom-config/',]
+                children: ['/website/xshell6/', '/website/buy-config/', '/website/node-config/', '/website/nginx-config/', '/website/webstrom-config/','/website/system-optimize/']
             },
             {
                 title: 'es6',
