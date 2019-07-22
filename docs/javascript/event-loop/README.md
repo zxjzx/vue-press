@@ -2,6 +2,12 @@
 
 [[toc]]
 
+> 概念：当主线程运行的时候,JS会产生堆(如变量的定义)和栈(执行栈)
+  主线程中调用的webaip所产生的异步操作(dom事件、ajax回调、定时器等)只要产生结果，就把这个回调塞进“任务队列”中等待执行。
+  当主线程中的同步任务执行完毕，系统就会依次读取“任务队列”中的任务，将任务放进执行栈中执行。
+  执行任务时可能还会产生新的异步操作，会产生新的循环，整个过程是循环不断的。
+
+
 ### 例1、以下代码输出结果 Promise
 ```javascript
 setTimeout(function() { 
@@ -20,16 +26,18 @@ console.log(5); //第一个宏任务
 //2,3,5,4,1
 ```
 
-+ 宏任务
++ 1、宏任务
 
 **setTimeout**，**setInterval**，**setImmediate**， I/O，promise中的executor，script；
-+ 微任务
++ 2、微任务
 
 原生**Promise**，**Promise.then**,(有些实现的promise将then方法放到了宏任务中)，MutationObserver， MessageChannel，process.nextTick
 
 ::: warning
-出现async/await不要慌，记住async正常执行，await后面的函数相当于promise.then，是一个微任务
+（1）、出现async/await不要慌，记住async正常执行，await后面的函数相当于promise.then，是一个微任务
+（2）、process.nextTick和Promise的回调函数，追加在本轮循环，即同步任务一旦执行完成，就开始执行它们，
 
+开发过程中如果想让异步任务尽可能快地执行，可以使用process.nextTick来完成
 特别的：setImmediate比setTimeout先执行，process.nextTick优先级高于Promise.then
 :::
 
@@ -358,4 +366,36 @@ console.log('8');
 ```
 推荐文章，讲解更详细
 https://juejin.im/post/5c9a43175188252d876e5903
+
+### 例8、综合案例
+```javascript
+async function async1(){
+  console.log('1')
+  await async2()
+  console.log('2')
+}
+async function async2(){
+  console.log('3')
+}
+console.log('4')
+setTimeout(function(){
+  console.log('5')
+},0)
+setTimeout(function(){
+  console.log('6')
+},3)
+setImmediate(() => console.log('7'));
+process.nextTick(() => console.log('8'));
+async1();
+new Promise(function(resolve){
+  console.log('9')
+  resolve();
+  console.log('10')
+}).then(function(){
+  console.log('11')
+})
+console.log('12')
+//  错误答案：4,1,3,9,10,12,2,7,8,11,5,6
+//  正确答案：4,1,3,9,10,12,8,2,11,5,7,6
+```
 

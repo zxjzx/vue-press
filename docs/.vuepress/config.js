@@ -38,61 +38,62 @@ module.exports = {
             }
             , */
             {
-                title: 'vue',
+                title: 'VUE',
                 collapsable: false,
                 children: [
-                    '/vue/', '/vue/element-tree/', '/vue/diff/','/vue/event/',
+                    '/vue/', '/vue/element-tree/', '/vue/diff/','/vue/event/','/vue/vue-performance/',
                 ]
             },
             {
-                title: 'http',
+                title: 'HTTP',
                 collapsable: false,
                 children: [
                     '/http/'
                 ]
             },
             {
-                title: 'website 服务器相关',
-                collapsable: true,
-                children: ['/website/xshell6/', '/website/buy-config/', '/website/node-config/', '/website/nginx-config/', '/website/webstrom-config/','/website/system-optimize/']
+                title: 'Website 服务器相关',
+                collapsable: false,
+                children: ['/website/xshell6/', '/website/buy-config/', '/website/node-config/', '/website/nginx-config/',
+                    '/website/webstrom-config/','/website/https-config/','/website/system-optimize/']
             },
             {
-                title: 'es6',
+                title: 'ES6',
                 collapsable: false,
                 children: [
-                    '/es6/'
+                    '/es6/','/es6/promise/'
                 ]
             },
             {
-                title: 'javascript',
+                title: 'JAVASCRIPT',
                 collapsable: false,
                 children: [
                     '/javascript/time/', '/javascript/event-loop/', '/javascript/this/','/javascript/js-help/',
                 ]
             },
             {
-                title: 'html静态页面',
+                title: 'Html静态页面',
                 collapsable: false,
-                children: ['/html/', '/html/html5/']
+                children: ['/html/', '/html/html5/', '/html/html5-websocket/']
             },
             {
-                title: 'css',
+                title: 'CSS',
                 collapsable: false,
                 children: ['/css/', '/css/rem/', '/css/rem-less/']
             },
             {
-                title: 'gulp',
+                title: 'GULP',
                 collapsable: false,
                 children: ['/gulp/']
             },
 
             {
-                title: 'others',
+                title: 'OTHERS',
                 collapsable: false,
                 children: ['/others/', '/others/web-interview/']
             },
             {
-                title: 'help',
+                title: 'HELP',
                 collapsable: false,
                 children: ['/help/']
             },

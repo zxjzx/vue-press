@@ -1,4 +1,4 @@
-# 六、优化系统加载速度
+# 七、优化系统加载速度
 vue项目打包后vendor.js太大，如果加上mapping的话，该文件可能有1M+，这样的话会导致页面第一次加载运行过慢，vendor.js是node_modules里所用到的modules的打包后的集合js文件.。
 ## 一、分开打包
 使用webpack中的config.optimization.splitChunks分开打包
@@ -12,7 +12,7 @@ vue项目打包后vendor.js太大，如果加上mapping的话，该文件可能�
 webpack.base.conf.js里设置externals选项，目的是不打包这些选项,由于index.html中script的引入
 ## 四、路由懒加载
 路由懒加载也叫延迟加载，即在需要的时候进行加载
-```json
+```javascript
 {
               path: 'echarts-setting',
               name: 'echarts-setting',

@@ -1,6 +1,8 @@
 <template>
     <div>
         <h3 align="center">执行js代码</h3>
+        <iframe src="//player.bilibili.com/player.html?aid=52738855&cid=92292788&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
         <div align="center">
             <textarea v-model="runValue" class="content"></textarea>
             <input id="Button2" type="button" value="执行程序" @click="Button1_onclick" style="width: 145px"/>
