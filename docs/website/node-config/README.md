@@ -1,5 +1,8 @@
 # 三、在阿里云服务器上运行node项目
++ 图片显示有问题的可点击链接查看[博客原文](https://blog.csdn.net/sinat_36146776/article/details/93607884)
+
 [[toc]]
+
 承接上一篇文章,[服务器上如何配置git,node环境](https://blog.csdn.net/sinat_36146776/article/details/93604788)，我已经在阿里云服务器上成功部署了node，git环境
 先切换目录到"jane-code"可看到两个文件，左边是我项目文件夹，右边是我新建的hello.js文件夹，用来测试。
 

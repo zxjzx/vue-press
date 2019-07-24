@@ -1,5 +1,8 @@
 # 二、购买阿里云，并在阿里云服务器上配置Git下载、node项目等运行环境
++ 图片显示有问题的可点击链接查看[博客原文](https://blog.csdn.net/sinat_36146776/article/details/93604788)
+
 [[toc]]
+
 ## 1、获取服务器
 在阿里云官网上注册后进行实名验证，验证需要几天。验证成功后
 购买，[购买地址](https://ecs-buy.aliyun.com/wizard?spm=5176.8789780.1092585.1.72b955caBnrK2M#/prepay/cn-hongkong?periodType=Yearly&period=1&instanceType=ecs.g5.large)，初学者入门级一般选择'CentOS'，我选择的是CentOS，地域等其他的都自选，自己玩的话肯定选个最便宜的。购买成功后会受到相应的短信，信息如下

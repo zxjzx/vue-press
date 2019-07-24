@@ -1,4 +1,5 @@
 # 六、https config
++ 图片显示有问题的可点击链接查看[博客原文](https://blog.csdn.net/sinat_36146776/article/details/94748556)
 
 其他关于服务器的配置可查看我的其他文章
 #### 1、进入控制台-SSL证书

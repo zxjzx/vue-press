@@ -1,5 +1,8 @@
 # 四、vue-ci3打包并部署到服务器，在服务器上(CentOS7+)上配置nginx反向代理访问node后端代码1
++ 图片显示有问题的可点击链接查看[博客原文](https://blog.csdn.net/sinat_36146776/article/details/93745694)
+
 [[toc]]
+
 使用vue-cli3打包后的项目，如何在服务器上运行？并成功访问node后端代码
 前端打包后的代码在dist文件夹下，直接丢入服务器即可运行，我此处用的是nginx指定前端代码目录“/jane-code/clock-out/dist;”。
 后端代码用node写，node app.js启动，端口号为4000，

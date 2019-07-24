@@ -1,5 +1,8 @@
 # 五、用webstrom将打包代码上传到服务器
++ 图片显示有问题的可点击链接查看[博客原文](https://blog.csdn.net/sinat_36146776/article/details/93763236)
+
 [[toc]]
+
 ## （一）、用webstrom将本地打包的代码上传到阿里云服务器上
 + 本地代码情况如下图
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190626183053227.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzM2MTQ2Nzc2,size_16,color_FFFFFF,t_70)
@@ -28,6 +31,9 @@
 
 
 ## （二）、用webstrom直接连接服务器进行操作，可替换xshell的使用
+
++ 图片显示有问题的可点击链接查看[博客原文](https://blog.csdn.net/sinat_36146776/article/details/93766880)
+
 
 ###  1、步骤一
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190626190510811.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzM2MTQ2Nzc2,size_16,color_FFFFFF,t_70)

@@ -39,6 +39,6 @@ for keep-alive 组件被移除时调用
 
 ### 11、computed
 在文档首次加载时会执行一次，当Vue实例中的data属性变化并被computed中的计算属性（方法）引用时，所有的相关计算属性又会执行一次。
-
+是计算属性，用法与data一致
 
 [网上不错的讲解](https://segmentfault.com/a/1190000008010666)

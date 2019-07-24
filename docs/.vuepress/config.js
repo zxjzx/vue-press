@@ -1,8 +1,10 @@
 module.exports = {
-    title: 'Jane\'s blog',
-    description: '我的个人网站',
+    title: 'Jane\'Blog',
+    description: '前端开发,es6,javascript,html,css,linux',
+    keywords:'前端开发,es6,javascript,html,css,linux',
     head: [ // 注入到当前页面的 HTML <head> 中的标签
         ['link', {rel: 'icon', href: '/logo.jpg'}], // 增加一个自定义的 favicon(网页标签的图标)
+        ['script', {type:'text/javascript',src: 'https://hm.baidu.com/hm.js?7aee26d62554f9fa7bc1a5374d64f593',}], // 增加一个自定义的 favicon(网页标签的图标)
     ],
     port: '8088',
     base: '/', // 这是部署到github相关的配置
@@ -25,6 +27,8 @@ module.exports = {
                     {text: '百度脑图', link: 'http://naotu.baidu.com/home'},
                     {text: '翻墙工具', link: 'https://pao-pao.net/vpn-compare'},
                     {text: 'nutui - 京东风格', link: 'https://nutui.jd.com'},
+                    {text: 'Fundebug - BUG 监控平台', link: 'https://www.fundebug.com/'},
+                    {text: 'MDN - javascript手册', link: 'https://developer.mozilla.org/zh-CN/'},
                 ]
             },
         ],
@@ -68,13 +72,14 @@ module.exports = {
                 title: 'JAVASCRIPT',
                 collapsable: false,
                 children: [
-                    '/javascript/time/', '/javascript/event-loop/', '/javascript/this/','/javascript/js-help/',
+                    '/javascript/time/', '/javascript/event-loop/', '/javascript/this/',
+                    '/javascript/js-help/','/javascript/code-review/','/javascript/deep-clone/',
                 ]
             },
             {
                 title: 'Html静态页面',
                 collapsable: false,
-                children: ['/html/', '/html/html5/', '/html/html5-websocket/']
+                children: ['/html/', '/html/html5/', '/html/html5-websocket/', '/html/meta-viewport/']
             },
             {
                 title: 'CSS',
