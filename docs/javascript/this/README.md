@@ -1,30 +1,72 @@
-#  APPLY、CALL、BIND区别、用法-如何改变this的指向，以及实用场景
+#  APPLY、CALL、BIND区别、用法-如何改变THIS的指向，以及实用场景
+
+CSDN对应讲解略有不同[原文](https://blog.csdn.net/sinat_36146776/article/details/80061736)
 
 [[toc]]
+
 ## 一般情况下
 this指向window 
+```javascript
+this// Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190327180907393.png)
+function fun(name) {
+    console.log(name);//jane
+    console.log(this);//Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
+}
+fun('jane');
 
+```
 
 ## 改变this指向
-call,apply改变this指向 
+### apply改变this指向,指向obj
 
-![改变this指向](https://img-blog.csdnimg.cn/20190327181106292.png)
+```javascript
+let fun = function(name){
+    console.log(name);//jane
+    console.log(this);//{age: 18}
+}
+let obj = {age:18};
+fun.apply(obj,['jane']);
+```
 
+### call改变this指向,指向obj
+```javascript
+let fun = function(name){
+    console.log(name);// jane
+    console.log(this);// {age: 18} 
+}
+let obj = {age:18};
+fun.call(obj,'jane');
+```
 
-## bind
-bind改变this指向
-
-![bind](https://img-blog.csdnimg.cn/20190327181355608.png)
+### bind改变this指向,指向obj
+```javascript
+let fun = function(name){
+    console.log(name);// jane
+    console.log(this);// {age: 18}
+}
+let obj = {age:18};
+fun.bind(obj,'jane')()
+```
 
 
 ## this指向window
-若想要f1里的this依旧指向window，可如下设置（如：vue中使用导入js代码，若想js中正常使用this,则必须通过以下方式中的任意一种改变this指向）
-![this指向window](https://img-blog.csdnimg.cn/20190327181820680.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzM2MTQ2Nzc2,size_16,color_FFFFFF,t_70)
+若想要fun里的this依旧指向window，可如下设置（如：vue中使用导入js代码，若想js中正常使用this,则必须通过以下方式中的任意一种改变this指向）
+```javascript
+let fun = function(name){
+    console.log(name);
+    console.log(this);
+}
+fun.call(this,['jane'])
+fun.bind(this,'jane')()
+fun.call(this,'jane')
+// result
 
+// jane
+// Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
+```
 
-## for example
+## For example
 ```javascript
 apply、call、bind区别、用法
  
