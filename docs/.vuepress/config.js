@@ -45,7 +45,7 @@ module.exports = {
                 title: 'VUE',
                 collapsable: false,
                 children: [
-                    '/vue/', '/vue/element-tree/', '/vue/diff/','/vue/event/','/vue/vue-performance/',
+                    '/vue/', '/vue/element-tree/', '/vue/diff/','/vue/event/','/vue/vue-performance/','/vue/callback-component/',
                 ]
             },
             {
