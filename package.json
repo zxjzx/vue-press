@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@nutui/nutui": "^2.1.5",
+    "vue": "^2.6.11",
     "vuepress": "^1.0.2"
   }
 }

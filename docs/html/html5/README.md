@@ -1,4 +1,7 @@
 # html5 - requestAnimationFrame
+
+> requestAnimationFrame由系统来决定回调函数的执行时机。 优势：页面激活才执行，不会后台运行，消耗资源；节流执行，即在一定时间内，只执行一次;而settimeout页面关闭后仍能执行
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
